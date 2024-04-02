@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let employee = {
+            name: "",
+            age: 0
+        }
+        const employees = [
+            {
+                name: "Nguyễn Văn A",
+                age: 21,
+            },
+            {
+                name: "Nguyễn Văn B",
+                age: 30,
+            },
+            {
+                name: "Nguyễn Văn C",
+                age: 19,
+            }
+        ]
+        function sortEmployees(arr, string){
+            const sortedArr = [...arr];
+            if(string === "Increase") {
+                sortedArr.sort((a, b) => a.age - b.age);
+            }else if (string === "Decrease") {
+                sortedArr.sort((a, b) => b.age - a.age);
+            } 
+            return sortedArr;
+        }
+        console.log(sortEmployees(employees, "Decrease"));
+        console.log(sortEmployees(employees, "Increase"));
+    </script>
+</body>
+</html>
